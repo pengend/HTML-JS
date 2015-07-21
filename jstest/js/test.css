@@ -1,0 +1,41 @@
+  div { 
+  	position: relative;
+  	margin: 20px;
+  	width: 2000px;
+  	height: 300px;
+  	display: inline-block;
+  	vertical-align: top;
+  }
+
+  img {
+  	width: 300px;
+  	height: 300px;
+  }
+  #montagneGrand {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+
+  }
+
+  #montagnePetit {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .miniature {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    padding: 5px;
+    margin-left: 20px;
+  }
+
+  #gr {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    display: none;  
+  }

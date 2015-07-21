@@ -1,0 +1,53 @@
+<html>
+<meta charset="UTF-8">
+	<head>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	</head>
+	<body style="display:inline-block">
+		<div>
+			image :
+			<img src="joli22.jpg" style="z-index:2;position:absolute">
+			<img src="fille.jpg" style="z-index:1;position:absolute">
+		</div><br />
+		<button id="affiche">affiche</button>
+		<button id="cache">cache</button>
+		<button id="opac">opacity</button>
+		<button id="diapo">diaporama</button>
+		<div>
+			<img id="animed" style="border: 5px solid black" src="fille.jpg">
+		</div>
+<button id="enchainer">Enchaîner les animations</button>
+<button id="nePasEnchainer">Ne pas enchaîner les animations</button><br />
+<button id="executerEnMemeTemps">Exécuter les animations en même temps</button>
+<button id="etatInitial">État initial</button><br /><br />
+<div>
+	<img id="move" src="joli22.jpg" style="width:50px;height:50px;position:relative">
+	<span id="infos">Cliquez sur Etat de la file d'attente</span><br /><br />
+</div>
+<span id="infos">Cliquez sur Etat de la file d'attente</span><br /><br />
+<button id="droite">Droite</button>
+<button id="gauche">Gauche</button>
+<button id="bas">Bas</button>
+<button id="haut">Haut</button>
+<button id="tourner">tourner</button>
+<button id="etatFile">Etat de la file d'attente</button><br />
+<button id="stopFin">Stop et fin</button>
+<button id="stopAnnuleFin">Stop, annule et fin</button>
+<button id="stop">Stop</button>
+<button id="reprise">Reprise</button><br /><br />
+<div>
+	<span id="heure"></span>
+</div>
+<div>
+<img src="joli22.jpg" id="montagneGrand">
+<img src="fille.jpg" id="montagnePetit">
+</div>
+<div>
+	<img src="joli22.jpg" class="miniature">
+	<img src="fille.jpg" class="miniature"> <br>
+	<img id="gr">
+</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

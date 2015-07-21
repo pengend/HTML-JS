@@ -1,0 +1,139 @@
+/* 	pseudo-element need a container with option position:relative then position:absolulte in 
+	pseudo-element attributes.
+	*/
+
+.bloc {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 35px 26px;
+	padding: 25px;
+	width: 220px;
+	height: 110px;
+	background: #f0e8d8;
+	font-size: 20px;
+	line-height: 110px;
+	font-family: Georgia, Times, Serif;
+	text-align: center;
+/*	
+	for a gradiation, start by light color and end by dark color.
+*/
+		background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.11, #FF99FF), color-stop(0.56, #FFCCFF));
+	background-image: -webkit-linear-gradient(center bottom, #FF99FF 11%, #FFCCFF 56%);
+	background-image: -moz-linear-gradient(center bottom, #FF99FF 11%, #FFCCFF 56%);
+	background-image: linear-gradient(center bottom, #FF99FF 11%, #E68AE6 56%);
+
+}
+.bloc:after, .bloc:before {
+	content: " ";
+	position: absolute;
+	width: 50%;
+	height: 100px;
+	z-index: -10;
+}
+.bloc:before {}
+.bloc:after {}
+/*	box-shadow: 1.negative-positive (left-right side shadow)
+				2.negative-positive (top-bottow side shadow)
+				3.size
+				4.color
+	inset allow a inside box shadow.
+	for a color gradiation, select a color then find 2 darker color with less size.
+	1. the lightest with +++ size;
+	2. the darker one with ++ size;
+	3. the darkest with + size;
+*/
+.simple {
+	box-shadow: 0 0 65px #E6B8E6 inset, 0 0 20px #E68AE6 inset, 0 0 5px #CF7CCF;
+	-webkit-box-shadow: 0 0 65px #E6B8E6 inset, 0 0 20px #E68AE6 inset, 0 0 5px #CF7CCF;
+	-moz-box-shadow: 0 0 65px #E6B8E6 inset, 0 0 20px #E68AE6 inset, 0 0 5px #CF7CCF;
+}
+/*  laterals shadow need a :before(or :after) element with a full width size and important height
+	a border-radius between 0 and 1 add rounded effect to the left and right side , and on shadows */
+.laterals:before {
+	top: 15px; 
+	left: 0;
+	width: 100%;
+	height: 130px;
+	
+	border-radius: 12px / 65px;
+	box-shadow: 0px 0px 10px #555
+}
+.laterals:after {
+	display: none;
+}
+/*	same with laterals but the border-radius option has a value > 1 */
+.horizontal:before {
+	top: 0px;
+	left: 5%;
+	width: 90%;
+	height: 50px;
+	
+	border-radius: 100px / 12px;
+	box-shadow: 0 0 8px #555;
+}
+.horizontal:after { 
+	bottom: 0px;
+	left: 5%;
+	width: 90%;
+	height: 50px;
+	
+	border-radius: 125px / 12px;
+	box-shadow: 0 0 8px #565656;
+}
+/*	a lateral rotated shadow need a transform option to tilt the element and the shadow
+*/
+.lateral:before {
+	top: 10px;
+	left: 8px;
+	width: 50%;
+	height: 130px;
+	
+	box-shadow: -7px 0 10px #555;
+	transform: rotate(-5deg);
+}
+.lateral:after { display: none; }
+/* 	two laterals with a different positionning and rotation. We can add a border-radius to make the
+	shadows more visual. 
+*/
+.curve:before {
+	top: 52px;
+	left: 5px;
+
+	transform: rotate(-5deg);
+	box-shadow: 7px 6px 15px #333;
+}
+.curve:after {
+	top: 52px;
+	right: 5px;
+	
+	transform: rotate(5deg);
+	box-shadow: -7px 6px 15px #333;
+}
+
+.drop:before {
+	left: -5px;
+	top: 167px;
+	width: 280px;
+	height: 4px;
+	background: #aaa;
+
+	border-radius: 140px / 2px;
+	box-shadow: 0 0 5px #aaa, 0 0 10px #888, 0 0 15px #666;
+}
+
+.drop:after {
+	left: 8px;
+	top: 168px;
+	width: 255px;
+	height: 2px;
+	background: #666;
+	
+	border-radius: 125px / 1px;
+	box-shadow: 0 0 5px #444, 0 0 8px #333, 0 0 10px #666;
+}
+
+
+
+
+
